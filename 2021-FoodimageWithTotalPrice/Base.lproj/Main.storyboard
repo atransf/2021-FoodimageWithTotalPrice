@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,119 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_021_FoodimageWithTotalPrice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-L2-FuU">
+                                <rect key="frame" x="30" y="69" width="354" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TdJ-Ao-4WY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item &amp; Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKn-sQ-dfa">
+                                <rect key="frame" x="30" y="319" width="354" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VIq-y5-b2v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-BookIt" family="Bodoni 72 Oldstyle" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ona-zc-FFV">
+                                <rect key="frame" x="30" y="379" width="354" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K0E-JJ-aaR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next Dish">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextDishButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2LT-BG-KGA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip (%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIn-jv-0dI">
+                                <rect key="frame" x="100" y="444" width="59" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="id5-LF-dcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIs-gk-uRX">
+                                <rect key="frame" x="130.5" y="504" width="153" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Vmd-2P-bbk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Order This Dish">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="orderDishButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vE-wO-Fde"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total with tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWw-bg-uXH">
+                                <rect key="frame" x="30" y="574" width="354" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rne-XI-cfY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1K-Vo-uNq">
+                                <rect key="frame" x="215" y="444" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.83797997239999999" green="0.82703071829999997" blue="0.91072040799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HIs-gk-uRX" secondAttribute="trailing" id="3CQ-tS-6tN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GKn-sQ-dfa" secondAttribute="trailing" constant="30" id="4zo-MD-qfS"/>
+                            <constraint firstItem="qIn-jv-0dI" firstAttribute="top" secondItem="Ona-zc-FFV" secondAttribute="bottom" constant="35" id="69W-4s-9rN"/>
+                            <constraint firstItem="Bjc-L2-FuU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="7ql-IK-YcQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bjc-L2-FuU" secondAttribute="trailing" constant="30" id="AE2-yd-j8E"/>
+                            <constraint firstItem="Ona-zc-FFV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="AUV-K2-OR2"/>
+                            <constraint firstItem="Ona-zc-FFV" firstAttribute="top" secondItem="GKn-sQ-dfa" secondAttribute="bottom" constant="30" id="SAi-ez-SxT"/>
+                            <constraint firstItem="pWw-bg-uXH" firstAttribute="top" secondItem="HIs-gk-uRX" secondAttribute="bottom" constant="40" id="T8h-BG-PbL"/>
+                            <constraint firstItem="Bjc-L2-FuU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UwH-bF-j0b"/>
+                            <constraint firstItem="GKn-sQ-dfa" firstAttribute="top" secondItem="Bjc-L2-FuU" secondAttribute="bottom" constant="50" id="a0G-cl-Fbf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ona-zc-FFV" secondAttribute="trailing" constant="30" id="a2k-hE-Umo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c1K-Vo-uNq" secondAttribute="trailing" constant="79" id="aCo-4Z-ndg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pWw-bg-uXH" secondAttribute="trailing" constant="30" id="fZU-Dm-AYA"/>
+                            <constraint firstItem="c1K-Vo-uNq" firstAttribute="leading" secondItem="qIn-jv-0dI" secondAttribute="trailing" constant="56" id="hbO-wx-WOO"/>
+                            <constraint firstItem="c1K-Vo-uNq" firstAttribute="top" secondItem="qIn-jv-0dI" secondAttribute="top" id="kaA-7l-ldx"/>
+                            <constraint firstItem="GKn-sQ-dfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="llS-tJ-7p2"/>
+                            <constraint firstItem="c1K-Vo-uNq" firstAttribute="bottom" secondItem="qIn-jv-0dI" secondAttribute="bottom" id="nlS-9Q-Iik"/>
+                            <constraint firstItem="pWw-bg-uXH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oxY-Dh-5ms"/>
+                            <constraint firstItem="HIs-gk-uRX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pUZ-Ll-VYS"/>
+                            <constraint firstItem="HIs-gk-uRX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qhC-1T-xW1"/>
+                            <constraint firstItem="HIs-gk-uRX" firstAttribute="top" secondItem="c1K-Vo-uNq" secondAttribute="bottom" constant="30" id="r74-Nu-DQx"/>
+                            <constraint firstItem="Bjc-L2-FuU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="tTv-QH-fhO"/>
+                            <constraint firstItem="qIn-jv-0dI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xpd-Sq-4LS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Bjc-L2-FuU" id="Hqg-8c-3AG"/>
+                        <outlet property="itemNameAndPrice" destination="GKn-sQ-dfa" id="pgo-1Y-imB"/>
+                        <outlet property="tipInput" destination="c1K-Vo-uNq" id="Oxi-V4-lTB"/>
+                        <outlet property="total" destination="pWw-bg-uXH" id="FT5-Os-Ohh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
 </document>
